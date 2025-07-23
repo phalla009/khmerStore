@@ -1,0 +1,32 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+
+class UserController extends Controller
+{
+    public function loginForm(){
+        return view('login-form');
+
+    }
+     public function login(Request $request){
+        $remember = !empty($request->remember)? true : false;
+        if( Auth::attempt(
+            [
+                'email' => $request->email,
+                'password' => $request->password,
+                'is_admin'=>1,
+                'status' => 1,
+                'is_delete'=>0
+            ],
+            $remember
+        )){
+            return redirect()->route('dashboard');
+        }else{
+            return redirect()->back()->with('error', 'Invalid email or password');
+        }
+    }
+
+}

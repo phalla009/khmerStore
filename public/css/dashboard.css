@@ -1,0 +1,95 @@
+.report-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.report-card {
+    flex: 1;
+    min-width: 200px;
+    text-align: center;
+    padding: 15px;
+    border: 1px solid #ffcc80;
+    border-radius: 4px;
+}
+.report-container :hover {
+    background-color: #fff3e0;
+    cursor: pointer;
+}
+.report-card h3 {
+    margin: 0 0 10px;
+    color: #e65100;
+    font-size: 18px;
+}
+.report-card p {
+    margin: 0;
+    font-size: 24px;
+    color: #f57c00;
+    font-weight: bold;
+}
+.chart-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+.sales-table-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 16px;
+}
+th,
+td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ffcc80;
+}
+th {
+    background-color: #f57c00;
+    color: white;
+}
+tr:hover {
+    background-color: #fff3e0;
+}
+canvas {
+    max-width: 100%;
+}
+#salesChart {
+    width: 70%;
+    max-width: 700px;
+    display: block;
+    margin: 0 auto;
+}
+
+h2 {
+    color: #e65100;
+    margin-bottom: 15px;
+}
+@media (max-width: 600px) {
+    .report-container,
+    .chart-container,
+    .sales-table-container {
+        padding: 10px;
+    }
+    th,
+    td {
+        font-size: 14px;
+        padding: 8px;
+    }
+    .report-card {
+        min-width: 100%;
+    }
+}

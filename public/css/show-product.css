@@ -1,0 +1,111 @@
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    flex-direction: row;
+}
+.image-gallery {
+    flex: 1 1 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 20px;
+    border-right: 1px solid #ddd;
+    background-color: #f9f9f9;
+}
+.image-gallery img {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    background-color: #f0f0f0;
+    transition: transform 0.3s ease;
+}
+.img-small img {
+    max-height: 50px;
+    max-width: 50px;
+    margin-left: 5px;
+    height: auto;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    background-color: #f0f0f0;
+    transition: transform 0.3s ease;
+}
+
+.image-gallery img:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.product-details {
+    flex: 2 1 400px;
+    padding: 24px;
+}
+
+.product-details p {
+    font-size: 16px;
+    margin-bottom: 14px;
+    line-height: 1.6;
+    color: #555;
+}
+.product-details strong {
+    display: inline-block;
+    width: 150px;
+    color: #333;
+}
+
+.toolbar {
+    margin: 20px;
+}
+
+.toolbar a {
+    display: inline-block;
+    background-color: #3490dc;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 15px;
+    transition: background-color 0.3s ease;
+}
+
+.toolbar a:hover {
+    background-color: #2779bd;
+}
+.btn-remove {
+    border: none;
+    display: inline-block;
+    background-color: #e3342f;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 15px;
+    transition: background-color 0.3s ease;
+    margin-top: 15px;
+}
+
+.btn-remove:hover {
+    background-color: #cc1f1a;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .product-container {
+        flex-direction: column;
+    }
+
+    .image-gallery {
+        border-right: none;
+        border-bottom: 1px solid #ddd;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .image-gallery img {
+        max-width: 120px;
+        height: auto;
+    }
+}
