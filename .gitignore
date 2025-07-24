@@ -1,9 +1,7 @@
+/Laravel
 /vendor
 /node_modules
 .env
-*.log
 /public/storage
-/storage/*.key
-.DS_Store
-.idea
+.KH_Stor
 *.mysql
