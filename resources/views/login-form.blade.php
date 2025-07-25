@@ -128,6 +128,17 @@
         width: 100%;
       }
     }
+    .error {
+      color: red;
+      background-color: #ffe6e6;
+      padding: 10px;
+      border-left: 4px solid red;
+      border-radius: 4px;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+  }
+
   </style>
 </head>
 <body>
@@ -138,15 +149,17 @@
   <form class="login-container" method="POST" action="{{ route('login') }}">
     @csrf
     <h2>Login Form</h2>
-
+    @if (!empty(session('error')))
+      <div class="error">{{session('error')}}</div>
+    @endif
     <div class="form-group">
       <label for="username">Username</label>
-      <input type="text" id="username" name="username" placeholder="Enter your username" required>
+      <input type="text" id="username" name="username" placeholder="Enter your username" >
     </div>
 
     <div class="form-group">
       <label for="password">Password</label>
-      <input type="password" id="password" name="password" placeholder="Enter your password" required>
+      <input type="password" id="password" name="password" placeholder="Enter your password" >
     </div>
 
     <div class="checkbox-group">

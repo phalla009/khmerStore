@@ -15,7 +15,7 @@
                 <ul>
                     <li><a href="{{route('dashboard')}}">Home</a>|</li>
                     <li><a href="#">Website</a>|</li>
-                    <li><a href="#">Logout</a></li>
+                    <li><a href="{{route('logout')}}">Logout</a></li>
                 </ul>
             </nav>
             <div class="box">
