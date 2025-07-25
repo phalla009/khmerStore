@@ -76,14 +76,16 @@
       color: #333;
     }
 
-    .form-group input {
+    .form-group input[type="text"],
+    .form-group input[type="password"] {
       width: 100%;
       padding: 0.75rem;
       border: 1px solid #ccc;
       font-size: 1rem;
     }
 
-    .form-group input:focus {
+    .form-group input[type="text"]:focus,
+    .form-group input[type="password"]:focus {
       outline: none;
       border-color: #ff6200;
       box-shadow: 0 0 5px rgba(255, 98, 0, 0.3);
@@ -128,6 +130,7 @@
         width: 100%;
       }
     }
+
     .error {
       color: red;
       background-color: #ffe6e6;
@@ -137,8 +140,7 @@
       margin-bottom: 10px;
       display: flex;
       align-items: center;
-  }
-
+    }
   </style>
 </head>
 <body>
@@ -150,7 +152,7 @@
     @csrf
     <h2>Login Form</h2>
     @if (!empty(session('error')))
-      <div class="error">{{session('error')}}</div>
+      <div class="error">{{ session('error') }}</div>
     @endif
     <div class="form-group">
       <label for="username">Username</label>
@@ -162,14 +164,29 @@
       <input type="password" id="password" name="password" placeholder="Enter your password" >
     </div>
 
+    <!-- Show password checkbox -->
+    <div class="form-group">
+      <input type="checkbox" id="showPassword" />
+      <label for="showPassword">Show Password</label>
+    </div>
+{{-- 
     <div class="checkbox-group">
       <input type="checkbox" id="remember" name="remember">
       <label for="remember">Remember me</label>
-    </div>
+    </div> --}}
 
     <button class="login-btn" type="submit">Login</button>
   </form>
 </div>
+
+<script>
+  const passwordInput = document.getElementById('password');
+  const showPasswordCheckbox = document.getElementById('showPassword');
+
+  showPasswordCheckbox.addEventListener('change', function() {
+    passwordInput.type = this.checked ? 'text' : 'password';
+  });
+</script>
 
 </body>
 </html>
