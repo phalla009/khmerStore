@@ -144,13 +144,12 @@ body {
 #toolbar a {
     text-decoration: none;
     font-size: 15px;
-    background-color: #d38448;
+    background-color: #e99250;
     color: white;
     padding: 8px 20px;
-    border-radius: 5px;
 }
 #toolbar a:hover {
-    background-color: rgb(255, 178, 34);
+    background-color: rgba(237, 160, 18, 0.838);
     cursor: pointer;
 }
 #right #pagination {

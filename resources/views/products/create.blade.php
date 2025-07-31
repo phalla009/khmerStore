@@ -14,6 +14,20 @@
         #group-buttons button {
             flex: 1;
         }
+        .back-btn {
+            display: inline-block;
+            padding: 8px 16px;
+            color: #fff;
+            background-color: #6c757d; 
+            text-decoration: none;
+            font-weight: 500;
+            transition: background-color 0.3s ease;
+        }
+        .back-btn .arrow {
+            font-size: 28px;
+            margin-right: 8px;
+            vertical-align: middle;
+        }
     </style>
     <script>
         setTimeout(function() {
@@ -33,7 +47,8 @@
 
 @section('toolbar')       
     <a onclick="document.querySelector('form').submit()">Add Product</a>
-    <a href="{{ route('products.index') }}">&lt;&nbsp;Back</a>
+<a href="{{ route('products.index') }}" class="back-btn">&larr; Back</a>
+
 @endsection
 
 @section('content')
@@ -97,11 +112,11 @@
 
         <div class="flex justify-end" id="group-buttons">
             <button type="submit"
-                    class="bg-gradient-to-r from-red-500 to-orange-500 text-white py-3 px-6 rounded-lg font-semibold shadow-lg hover:from-red-600 hover:to-orange-600 focus:outline-none focus:ring-2 focus:ring-orange-400 focus:ring-offset-2 transition duration-200 ease-in-out">
+                    class="bg-gradient-to-r from-red-500 to-orange-500 text-white py-3 px-6 rounded-none font-semibold shadow-lg hover:from-red-600 hover:to-orange-600 focus:outline-none focus:ring-2 focus:ring-orange-400 focus:ring-offset-2 transition duration-200 ease-in-out">
                 Add Product
             </button>
             <button type="reset"
-                    class="bg-gradient-to-r from-red-500 to-orange-500 text-white py-3 px-6 rounded-lg font-semibold shadow-lg hover:from-red-600 hover:to-orange-600 focus:outline-none focus:ring-2 focus:ring-orange-400 focus:ring-offset-2 transition duration-200 ease-in-out">
+                   class="bg-gradient-to-r from-red-500 to-orange-500 text-white py-3 px-6 rounded-none font-semibold shadow-lg hover:from-red-600 hover:to-orange-600 focus:outline-none focus:ring-2 focus:ring-orange-400 focus:ring-offset-2 transition duration-200 ease-in-out">
                 Reset
             </button>
         </div>

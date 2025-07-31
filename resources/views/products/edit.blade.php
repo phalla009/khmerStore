@@ -72,7 +72,7 @@
         </div>
         <div class="flex justify-end" id="group-buttons">
             <button type="submit"
-                     class="bg-gradient-to-r from-red-500 to-orange-500 text-white py-3 px-6 rounded-lg font-semibold shadow-lg hover:from-red-600 hover:to-orange-600 focus:outline-none focus:ring-2 focus:ring-orange-400 focus:ring-offset-2 transition duration-200 ease-in-out">
+                    class="bg-gradient-to-r from-red-500 to-orange-500 text-white py-3 px-6 rounded-none font-semibold shadow-lg hover:from-red-600 hover:to-orange-600 focus:outline-none focus:ring-2 focus:ring-orange-400 focus:ring-offset-2 transition duration-200 ease-in-out">
                 Update Product
             </button>
 

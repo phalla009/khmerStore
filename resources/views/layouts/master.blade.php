@@ -27,13 +27,10 @@
                 </ul>
             </div>
             <div class="box">
-                <h2>Category Manager</h2>
+                <h2>Categories Manager</h2>
                 <ul>
-                    <li><a href="#">Desktops</a></li>
-                    <li><a href="#">Laptops</a></li>
-                    <li><a href="#">Photocopies</a></li>
-                    <li><a href="#">Printers</a></li>
-                    <li><a href="#">Accessories</a></li>
+                    <li><a href="{{route('categories.index')}}">Category Listing</a></li>
+                    <li><a href="{{route('categories.create')}}">Add New Category</a></li>
                 </ul>
             </div>
            

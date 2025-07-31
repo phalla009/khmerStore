@@ -1,4 +1,5 @@
 <?php
+use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\UserController;
 use App\Http\Middleware\AuthChecker;
@@ -25,6 +26,14 @@ Route::middleware([AuthChecker::class])->group(function(){
     Route::get('/products/{id}/confirm-deletion', [ProductController::class, 'confirmDeletion'])
         ->name('products.confirm.deletion');
 
+
+    route::get('categories/search',function(){
+        return view("categories.search");
+        })->name('categories.search');
+
+    Route::resource('/categories', CategoryController::class);
+    Route::get('/categories/{id}/confirm-deletion', [CategoryController::class, 'confirmDeletion'])
+        ->name('categories.confirm.deletion');
 
 });
 
